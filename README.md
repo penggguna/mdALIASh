@@ -1,4 +1,4 @@
-# mdaliash <3 <#
+# mdaliash <3 shell
 
 
 ## intro
