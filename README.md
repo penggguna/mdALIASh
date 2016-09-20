@@ -19,3 +19,4 @@ Awal penggunaan harus menyalakan ulang terminal
 atau buka tab terminal baru
 
 Setelah itu terdapat command baru yaitu mdaliash
+https://github.com/deriidf/mdaliash/wiki/Daftar-Perintah
