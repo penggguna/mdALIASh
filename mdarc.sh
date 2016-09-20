@@ -1,4 +1,7 @@
 #!/bin/bash
+
+#SAMBUTAN BUKA TERMINAL
+
 echo "$(date "+%H:%M, %A, %d %B, %Y.")"
 h=`date +%H`
 garis(){
@@ -13,6 +16,8 @@ elif [ $h -lt 18 ]; then
 else
   echo "Selamat Malam $USER! Apa ada yang bisa aku bantu?";garis
 fi
+
+#KONTEN BASH RC UBUNTU DEFAULT
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)

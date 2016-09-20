@@ -36,31 +36,30 @@ ascii
 echo
 echo "			          1.Pemasangan"
 echo "			          2.Penghapusan"
-echo "			         3.Penyuntingan"
-echo "			          4.Mempelajari"
-echo "			        5.Tentang mdalia.sh"
-echo "			             6.Keluar"
+echo "			            3.Keluar"
 
 read -r pemilihan
 case $pemilihan in
 
-  1)  echo "                      	Apa anda ingin memasang ini?(y/t)"
+  1)  echo "                           	Ingin Memasang?(y/t)"
       read -r pemilihan
 
         if [ "$pemilihan" = y ]
         then
-          cp .mdaliash.sh ~/.bash_aliases
-          cp .mdok.sh ~/.mdok.sh; chmod +x ~/.mdok.sh
-          cp .mdarc ~/.bashrc; chmod +x ~/.bashrc
+          cp script.sh ~/.bash_aliases
+          mv ~/.bashrc ~/.bashrc_mdaliash.bak
+          cp mdarc.sh ~/.bashrc; chmod +x ~/.bashrc
+          sudo cp mdaliash /bin/
           clear
           echo; echo
           senyum; echo
           echo "                                     Pemasangan Berhasil!"
           echo; echo;
-          echo "                             (Sangat disarankan untuk Pemula)"
-          echo "    Otodidak (11.4mb) adalah aplikasi open source baru yang terinspirasi dari Electrodroid,"
+          echo "                                (Disarankan untuk Pemula)"
+          echo "    Pembuat: Ade Malsasa Akbar"
+          echo "    Otodidak adalah aplikasi open source baru yang terinspirasi dari Electrodroid,"
           echo "    dengan kegunaan utama sebagai aplikasi belajar Linux yang all-in-one untuk pemula."
-          echo; echo "                           Apa anda ingin memasang Otodidak?(y/t)"
+          echo; echo "                           Ingin memasang Otodidak?(y/t)"
 
           read -r pemilihan
             if [ "$pemilihan" = y ]
@@ -75,56 +74,31 @@ case $pemilihan in
 	      clear
 
             else
-              echo
+              ./mdalia.sh
             fi
 
-          echo "                      	Apa anda ingin mempelajari mdalia.sh?(y/t)"
-
-          read -r pemilihan
-            if [ "$pemilihan" = y ]
-            then
-              echo "                     Untuk melakukan itu harus merestart Terminal anda"
-              echo "                  Dan kembali menjalankan ini lalu pilih menu 4.Mempelajari."
-              echo "                         Atau cukup membuka tab baru Terminal anda."
-              echo "                                          ./run"
-
-            else
-              ./.mdalia.sh
-            fi
         else
-          ./.mdalia.sh
+          ./mdalia.sh
         fi
       ;;
 
   2)
-      echo "                      	Apa anda ingin menghapus mdalia.sh?(y/t)"
+      echo "                           	Ingin Menghapus?(y/t)"
       read -r pemilihan
         if [ "$pemilihan" = y ]
         then
           clear
           rm ~/.bash_aliases && touch ~/.bash_aliases
-	  rm ~/.bashrc
+	        mv ~/.bashrc_mdaliash.bak ~/.bashrc
           echo; echo
           sedih; echo
           echo "                                     Penghapusan Berhasil!"
         else
-          ./.mdalia.sh
+          ./mdalia.sh
         fi
       ;;
 
-  3)  echo "			     Tulis Penyunting Teks yang dipakai"
-      read -r pemilihan
-      $pemilihan ~/.bash_aliases
-      ./.mdalia.sh
-      ;;
-
-  4)  ./.mempelajari.sh
-      ;;
-
-  5)  ./.tentang.sh
-      ;;
-
-  6)  clear
+  3)  clear
       echo; echo
       senyum
       echo
@@ -132,6 +106,6 @@ case $pemilihan in
       exit
       ;;
 
-  *)  ./.mdalia.sh
+  *)  ./mdalia.sh
       ;;
 esac
