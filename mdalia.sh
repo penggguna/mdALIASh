@@ -56,9 +56,9 @@ case $pemilihan in
           echo "                                     Pemasangan Berhasil!"
           echo; echo;
           echo "                                (Disarankan untuk Pemula)"
-          echo "    Pembuat: Ade Malsasa Akbar"
-          echo "    Otodidak adalah aplikasi open source baru yang terinspirasi dari Electrodroid,"
-          echo "    dengan kegunaan utama sebagai aplikasi belajar Linux yang all-in-one untuk pemula."
+          echo "  Pembuat: Ade Malsasa Akbar"
+          echo "  Otodidak adalah aplikasi open source baru yang terinspirasi dari Electrodroid,"
+          echo "  dengan kegunaan utama sebagai aplikasi belajar Linux yang all-in-one untuk pemula."
           echo; echo "                           Ingin memasang Otodidak?(y/t)"
 
           read -r pemilihan
