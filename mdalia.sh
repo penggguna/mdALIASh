@@ -46,6 +46,14 @@ case $pemilihan in
 
         if [ "$pemilihan" = y ]
         then
+          echo "MEMASANG PYTHON-PIP"
+          echo "==================="
+          sudo apt-get install python-pip
+          echo "MEMASANG PYGMENTS"
+          echo "==================="
+          sudo pip install Pygments
+          echo "MENYALIN BERKAS"
+          echo "==================="
           cp script.sh ~/.bash_aliases
           mv ~/.bashrc ~/.bashrc_mdaliash.bak
           cp mdarc.sh ~/.bashrc; chmod +x ~/.bashrc

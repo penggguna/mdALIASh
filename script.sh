@@ -1,5 +1,5 @@
 #!/bin/bash
-#         __   __  ______   _______  ___      ___   _______         _______  __   __ 
+#         __   __  ______   _______  ___      ___   _______         _______  __   __
 #        |  |_|  ||      | |   _   ||   |    |   | |   _   |       |       ||  | |  |
 #        |       ||  _    ||  |_|  ||   |    |   | |  |_|  |       |  _____||  |_|  |
 #        |       || |_|   ||  |_|  ||   |    |   | |  |_|  |       | |_____ |       |
@@ -31,7 +31,7 @@ alias buat='touch'
 alias buatdir='mkdir'
 alias hapus='rm'
 alias hapusdir='rmdir'
-alias lihat='cat'
+alias lihat='pygmentize'
 alias daftar='ls'
 alias tulis='cat >'
 alias sunting='cat >>'
